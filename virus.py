@@ -1,3 +1,6 @@
+'''Python-Virus
+GitHub: https://github.com/JoaoAssalim/Python-Virus'''
+
 import os
 import time
 
