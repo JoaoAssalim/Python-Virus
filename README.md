@@ -13,6 +13,11 @@ clone my project with git
   cd my-project
   python my-project.py
 ```
+
+## Observation
+
+if directory to desktop is: "C:\Users\username\Desktop", the program will be executed in desktop screen.
+else, the program will be executed in the folder it runned
     
 ## Feedback
 
